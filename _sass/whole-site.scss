@@ -1,0 +1,63 @@
+html {
+  overflow-y: scroll;
+} 
+
+body {
+  font-family: 'Rubik';
+  color: $darkgrey;
+}
+
+a {
+  color: $darkgreen !important;
+}
+
+a.highlight {
+  background-color: $lightgrey;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  color: $orange;
+}
+
+h3, 
+h4 {
+  color: $green;
+}
+
+img {
+  border-radius: 10px;
+}
+
+img.fit {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.align-h3 {
+  padding-top: 0.25em;
+}

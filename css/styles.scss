@@ -1,0 +1,160 @@
+---
+---
+
+@import "colours";
+@import "whole-site";
+
+header {
+  font-size: 1.2em;
+  & div {
+    min-height: 75px !important;
+  }
+  & .links {
+    padding-top: 29px;
+    padding-bottom: 5px;
+
+    & a {
+      color: $darkblue !important;
+      text-shadow: none;
+    }
+  }
+  & .link {
+    border-radius: 10px;
+    display: block;
+    float: right;
+    margin-left: 20px;
+    min-width: 120px;
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+  }
+  & .link:hover {
+    background-color: $lightgrey;
+    transition-duration: 0.5s;
+  }
+}
+
+section.heading-container {
+  width: 100%;
+  max-width: 446px;
+  height: 150px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#logo {
+  max-width: 187px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  
+  &.small {
+    max-width: 140px;
+
+    &:hover {
+      animation: bounce 0.5s;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+}
+
+#fruit-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 1.75em;
+  width: 100%;
+  &.title {
+    min-height: 250px !important;
+    position: relative;
+    &::before {
+      background-image: url("../Content/fruit.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 10px;
+      margin-bottom: 0.75em;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.25;
+      z-index: -1;
+    }
+  }
+  &.trimmed {
+    background-image: url("../Content/fruit-trimmed.png");
+    min-height: 80px !important;
+    opacity: 0.4;
+  }
+}
+
+#site-title {
+  left: 0;
+  opacity: 1.0;
+  padding: 1em 0 0 0.2em;
+  position: absolute;
+  top: 0;
+  &>h1 {
+    color: $darkorange;
+    font-size: 3.5em;
+  }
+}
+
+#cody {
+  width: 30px;
+  height: 30px;
+}
+
+.colour-box {
+  min-height: 100px;
+  margin: 40px;
+}
+
+.contact-icon {
+  text-align: center;
+  padding-right: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  #site-title>h1 {
+    padding-top: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    div {
+      min-height: 50px !important;
+    }
+
+    .links {
+      padding-top: 20px;
+    }
+    
+    .link {
+      margin-left: 20px;
+      min-width: 100px;
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+
+  #site-title>h1 {
+    font-size: 2.5em;
+  }
+}
